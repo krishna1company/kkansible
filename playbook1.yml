@@ -1,0 +1,21 @@
+---
+- hosts: '{{ host }}'
+  become: yes
+
+  roles:
+    - role: 
+      name: myrole1
+      vars:
+        host: "ansclient"
+        myroles: 
+         - mysql1
+         - apache1
+
+    - role: 
+      name: myrole2
+      vars:
+        host: "ansibleclient"
+        myroles: 
+         - mysql2
+         - apache2
+

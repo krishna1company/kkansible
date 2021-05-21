@@ -1,0 +1,15 @@
+---
+- hosts: dev
+  become: yes
+
+  roles:
+      - httpdinstall
+
+- hosts: qua
+  become: yes
+
+  roles:
+      - test
+
+      
+        
